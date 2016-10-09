@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html ng-app="mainApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Colin Miller</title>
+    <link rel="stylesheet" href="./vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/styles/stylesheet.css">
+  </head>
+  <body>
+    <img src="" alt="" />
+    <h1>Colin Miller</h1>
+    <h2>Full Stack Software Developer</h2>
+    <a href="#">LinkedIn</a>
+    <a href="#">Github</a>
+    <h5>Minneapolis, Minnesota</h5>
+    <p>651-442-7399</p>
+    <a href="#">colinchmiller@gmail.com</a>
+
+    <div class="col-md-6" id="tech-content" ng-controller="TechSkillsController">
+      <h2 ng-click="toggleShow()">Technical Skills</h2>
+      <div ng-show="showTech" ng-repeat="skill in techSkills">
+        {{skill}}
+      </div>
+    </div>
+
+    <div class="col-md-6" id="experience" ng-controller="ExperienceController">
+      <h2 ng-click="toggleShow()">Experience</h2>
+      <div ng-show="showExperience" ng-repeat="job in pastJobs">
+        {{job}}
+      </div>
+    </div>
+
+    <div class="col-md-6" id="education" ng-controller="EducationController">
+      <h2 ng-click="toggleShow()">Education</h2>
+      <div ng-show="showEducation" ng-repeat="school in pastSchools">
+        {{school}}
+      </div>
+    </div>
+
+    <div class="col-md-6" id="projects" ng-controller="ProjectController">
+      <h2 ng-click="toggleShow()">Projects</h2>
+      <div ng-show="showProjects" ng-repeat="project in projects">
+        {{project}}
+      </div>
+    </div>
+
+    <footer>
+      <h4>Contact</h4>
+      <h4>Leave a Comment</h4>
+    </footer>
+
+    <script type="text/javascript" src="./vendors/angular.min.js"></script>
+    <script type="text/javascript" src="./assets/scripts/mainapp.js"></script>
+  </body>
+</html>
