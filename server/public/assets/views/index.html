@@ -16,33 +16,36 @@
     <p>651-442-7399</p>
     <a href="#">colinchmiller@gmail.com</a>
 
-    <div class="col-md-6" id="tech-content" ng-controller="TechSkillsController">
-      <h2 ng-click="toggleShow()">Technical Skills</h2>
-      <div ng-show="showTech" ng-repeat="skill in techSkills">
-        {{skill}}
-      </div>
-    </div>
 
-    <div class="col-md-6" id="experience" ng-controller="ExperienceController">
-      <h2 ng-click="toggleShow()">Experience</h2>
-      <div ng-show="showExperience" ng-repeat="job in pastJobs">
-        {{job}}
-      </div>
-    </div>
+    <div ng-controller="RevealController">
+        <div class="col-md-6" id="tech-content" ng-controller="TechSkillsController">
+          <h2 ng-click="toggleShow('techSkills')">Technical Skills</h2>
+          <div ng-show="showTech" ng-repeat="skill in techSkills">
+            {{skill}}
+          </div>
+        </div>
 
-    <div class="col-md-6" id="education" ng-controller="EducationController">
-      <h2 ng-click="toggleShow()">Education</h2>
-      <div ng-show="showEducation" ng-repeat="school in pastSchools">
-        {{school}}
-      </div>
-    </div>
+        <div class="col-md-6" id="experience" ng-controller="ExperienceController">
+          <h2 ng-click="toggleShow('pastJobs')">Experience</h2>
+          <div ng-show="showExperience" ng-repeat="job in pastJobs">
+            {{job}}
+          </div>
+        </div>
 
-    <div class="col-md-6" id="projects" ng-controller="ProjectController">
-      <h2 ng-click="toggleShow()">Projects</h2>
-      <div ng-show="showProjects" ng-repeat="project in projects">
-        {{project}}
+        <div class="col-md-6" id="education" ng-controller="EducationController">
+          <h2 ng-click="toggleShow('pastSchools')">Education</h2>
+          <div ng-show="showEducation" ng-repeat="school in pastSchools">
+            {{school}}
+          </div>
+        </div>
+
+        <div class="col-md-6" id="projects" ng-controller="ProjectController">
+          <h2 ng-click="toggleShow('projects')">Projects</h2>
+          <div ng-show="showProjects" ng-repeat="project in projects">
+            {{project}}
+          </div>
+        </div>
       </div>
-    </div>
 
     <footer>
       <h4>Contact</h4>
